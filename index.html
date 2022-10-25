@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="test('onLoad')">
+    <input type="text" onchange='test("onChange")' oninput="test('OnInput')" />
+    <h3 onmouseover="test('onMouseover')" onmouseout="test('onMouseout')">Test test test</h3>
+    <h2 id="info"></h2>
+
+    <script>
+        function test(input1) {
+            let infotext = document.getElementById('info');
+            if (input1 == 'OnInput') {
+                infotext.innerHTML += '<li>oninput</li>';
+            }
+            else if (input1 == 'onChange') {
+                infotext.innerHTML += '<li>onchange</li>';
+            }
+            else if (input1 == 'onLoad') {
+                infotext.innerHTML += '<li>onload</li>';
+            }
+            else if (input1 == 'onMouseover') {
+                infotext.innerHTML += '<li>onmouseover</li>';
+            }
+            else if (input1 == 'onMouseout') {
+                infotext.innerHTML += '<li>onmouseout</li>';
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>
